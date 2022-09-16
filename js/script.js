@@ -80,10 +80,10 @@ var printResult = getRandomQuote();
   // the first two <p></p> elements, their classNames, 
   // and the quote and source properties, but leave off 
   // the second closing `</p>` tag for now
-var html = document.getElementById("quote-box").innerHTML = 
+var html = 
  
  "<p class='quote'>"+ quotes.quote+"</p>"
-  + "<p class='source'>" +quotes.source+"</p>" ;
+  + "<p class='source'>" +quotes.source
 
 
 
@@ -94,21 +94,23 @@ var html = document.getElementById("quote-box").innerHTML =
   // to the HTML string
 
   if(printResult.includes("citation")){
-    html = "<span class='citation'>"+quotes.citation+"</span>";
+    html += "<span class='citation'>"+quotes.citation+"</span>";
   }
   // 4. Use an if statement to check of the year property exists, 
   // and if it does, concatenate a <span></span> element, 
   // appropriate className, and year property to the HTML 
   //string
   if(printResult.includes("year")){
-    html = "<span class='year'>"+quotes.year+"</span>"
+    html += "<span class='year'>"+quotes.year+"</span>"
   }
 
   // 5. After the two if statements, concatenate the closing </p> 
   // tag to the HTML string
-
+html +='</p>';
   // 6. set the innerHTML of the quote-box div to equal the 
   // complete HTML string
+  document.getElementById('quote-box').innerHTML = html; 
+
 }
 
 /***
