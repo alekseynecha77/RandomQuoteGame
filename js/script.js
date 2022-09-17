@@ -82,8 +82,8 @@ var printResult = getRandomQuote();
   // the second closing `</p>` tag for now
 var html = 
  
- "<p class='quote'>"+ quotes.quote+"</p>"
-  + "<p class='source'>" +quotes.source
+ "<p class='quote'>"+ printResult.quote+"</p>"
+  + "<p class='source'>" +printResult.source
 
 
 
@@ -93,11 +93,11 @@ var html =
   // element, appropriate className, and citation property 
   // to the HTML string
   if (printResult.citation) {
-    html += `<span class="citation"> ${quotes.citation}</span>`;
+    html += `<span class="citation"> ${printResult.citation}</span>`;
   }
 
   if (printResult.year) {
-    html += `<span class="year">${quotes.year}</span>`;
+    html += `<span class="year">${printResult.year}</span>`;
   }
 
 
