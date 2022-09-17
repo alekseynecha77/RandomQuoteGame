@@ -10,6 +10,7 @@ project 1 - A Random Quote Generator
 /*** 
  * `quotes` array 
 ***/
+var colors = ['red', 'green', 'blue', 'moon', 'orange', 'purple', 'peach', 'pink', 'gray', 'teal'];
 var quotes = [
   {
     quote:'Sometimes a legend that endures for centuries...endures for a reason.',
@@ -76,6 +77,8 @@ function printQuote(){
   // / 1. Create a variable that calls the getRandomQuote() 
   // function
 var printResult = getRandomQuote();
+document.body.style.backgroundColor = getRandomColor();
+
   // 2. Create a variable that initiates your HTML string with 
   // the first two <p></p> elements, their classNames, 
   // and the quote and source properties, but leave off 
@@ -100,7 +103,9 @@ var html =
     html += `<span class="year">${printResult.year}</span>`;
   }
 
-
+  if (printResult.tag) {
+    html += `<span class = "tag">, ${printResult.tag}</span>`;
+   }
 
   // if(printResult.citation){
   //   html += "<span class='citation'>"+quotes.citation+"</span>";
@@ -121,6 +126,15 @@ html +='</p>';
   document.getElementById('quote-box').innerHTML = html; 
 
 }
+
+function getRandomColor(){
+
+return colors[Math.floor(Math.random() * 9)];
+
+
+
+}
+setInterval(printQuote, 4000);
 
 /***
  * click event listener for the print quote button
