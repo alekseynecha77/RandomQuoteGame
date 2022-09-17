@@ -49,19 +49,19 @@ var quotes = [
  * `getRandomQuote` function
 ***/
 
-function getRandomQuote(array){
+function getRandomQuote(){
 // In the function body, create a variable to store a random number ranging from zero to the index of the last item in the quotes array. 
 
 var qoutedIndex = Math.floor(Math.random() * quotes.length);
 // array.length rather than the actual quotes variable makes this function a little bit more flexible
 
-for(let i = 0; i< array.length; i++){
+for(let i = 0; i< quotes.length; i++){
   // Random quote variable with the index set to your random number variable 
 
-var randQoutes = array[qoutedIndex];
+var randQoutes = quotes[qoutedIndex];
 
 }
-return randQoutes
+return randQoutes;
 
 
 }
@@ -92,17 +92,26 @@ var html =
   // exists, and if it does, concatenate a <span></span> 
   // element, appropriate className, and citation property 
   // to the HTML string
-
-  if(printResult.includes("citation")){
-    html += "<span class='citation'>"+quotes.citation+"</span>";
+  if (printResult.citation) {
+    html += `<span class="citation"> ${quotes.citation}</span>`;
   }
+
+  if (printResult.year) {
+    html += `<span class="year">${quotes.year}</span>`;
+  }
+
+
+
+  // if(printResult.citation){
+  //   html += "<span class='citation'>"+quotes.citation+"</span>";
+  // }
   // 4. Use an if statement to check of the year property exists, 
   // and if it does, concatenate a <span></span> element, 
   // appropriate className, and year property to the HTML 
   //string
-  if(printResult.includes("year")){
-    html += "<span class='year'>"+quotes.year+"</span>"
-  }
+  // if(printResult.year){
+  //   html += "<span class='year'>"+quotes.year+"</span>"
+  // }
 
   // 5. After the two if statements, concatenate the closing </p> 
   // tag to the HTML string
