@@ -134,7 +134,7 @@ return colors[Math.floor(Math.random() * 9)];
 
 
 }
-setInterval(printQuote, 4000);
+setInterval(printQuote, 3000);
 
 /***
  * click event listener for the print quote button
