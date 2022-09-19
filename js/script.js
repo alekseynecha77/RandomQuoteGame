@@ -16,31 +16,34 @@ var quotes = [
     quote:'Sometimes a legend that endures for centuries...endures for a reason.',
     source: "- Dan Brown.",
     citation: "― Dan Brown, The Lost Symbol",
-    year: "2010"
+    year: "2010",
+    tag: 'Book author'
   },
   {
 
     quote:'Legend remains victorious in spite of history.', 
     source:"- Sarah Bernhardt.",
-    citation: "French - Actress October 22, 1845 - March 26, 1923"
-
+    citation: "French - Actress October 22, 1845 - March 26, 1923",
+    tag: 'Actress'
   },
   {
     quote:'Heroes get remembered, but legends never die.', 
     source:"- Max Holloway.",
-    citation: "Taken from the movie The Sandlot"
-
+    citation: "Taken from the movie The Sandlot",
+    tag: 'Movie'
 
   },
   {
     quote:'If you want to be a legend you have to fight with legends.',
     source:"- Aleksei Oleinik.",
-    citation: "Russian - Athlete Born: June 25, 1977"
+    citation: "Russian - Athlete Born: June 25, 1977",
+    tag: 'Athlete'
   },
   {
     quote:'Legends are all to do with the past and nothing to do with the present',
      source:"-Lauren Bacall.",
-     citation: "Profession Actress, 16 September 1924"
+     citation: "Profession Actress, 16 September 1924",
+     tag: 'Actress'
   }
 
 ];
